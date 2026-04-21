@@ -392,8 +392,8 @@ body{
         <h3>服务器</h3>
         <div style="margin-top:15px;line-height:1.8;">
             <div>公益无规则生存服</div>
-            <div>端口：9666.fun</div>
-            <div>IP：39256</div>
+            <div>IP：play.simpfun.cn</div>
+            <div>端口：39256</div>
         </div>
     </div>
 </div>
@@ -453,14 +453,14 @@ body{
     </div>
 </div>
 
-<!-- 服务器实时监测（已加入真实查询） -->
+<!-- 服务器实时监测（已改成基岩版接口） -->
 <div id="mMonitor" class="modal">
     <div class="modal-box">
         <div class="close-x" onclick="closeM('mMonitor')">×</div>
         <h3>服务器实时监测</h3>
         <div style="margin-top:15px;line-height:2;text-align:left;">
             <div>服务器名：公益无规则生存服</div>
-            <div>IP：9666.fun</div>
+            <div>IP：play.simpfun.cn</div>
             <div>端口：39256</div>
             <div style="margin-top:10px;">在线人数：<span id="onlinePlayers">--</span></div>
             <div>延迟：<span id="serverPing">--</span> ms</div>
@@ -561,9 +561,9 @@ function speed(s){
     alert('已设置');
 }
 
-// 服务器实时监测（使用公共API，解决跨域问题）
+// 服务器实时监测（基岩版专用API，适配简幻欢）
 function checkServerStatus() {
-    const apiUrl = `https://api.mcsrvstat.us/2/9666.fun:39256`;
+    const apiUrl = `https://api.mcsrvstat.us/bedrock/2/play.simpfun.cn:39256`;
     fetch(apiUrl)
         .then(res => res.json())
         .then(data => {
